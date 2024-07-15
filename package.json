@@ -11,10 +11,15 @@
     "url": "git+https://github.com/gerold-penz/better-sqlite3-key-value.git"
   },
   "module": "src/index.ts",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/jest": "^29.5.12",
+    "better-sqlite3": "^11.1.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.2",
+    "ts-node": "^10.9.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -27,7 +32,6 @@
   "keywords": [
     "Better-SQLite3",
     "NodeJs",
-    "Bun",
     "SQLite",
     "Key-Value",
     "KV",
@@ -47,13 +51,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "test": "bun test",
+    "test": "jest",
     "increment_package_version": "npm version patch --no-git-tag-version",
-    "prepublishOnly": "bun run test",
-    "npm:publish": "bun run increment_package_version && npm publish --access public --dry-run",
-    "jsr:publish": "bunx jsr publish --dry-run"
+    "prepublishOnly": "npm run test",
+    "npm:publish": "npm run increment_package_version && npm publish --access public --dry-run",
+    "jsr:publish": "npx jsr publish --dry-run"
   },
   "files": [
-    "src"
+    "dist"
   ]
 }
