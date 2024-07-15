@@ -1,2 +1,4 @@
-# better-sqlite3-key-value
-A super fast key-value store with SQLite that uses Better-SQLite3 and v8 as a fast JSON replacement.
+# Better-SQLite3 Key Value
+
+A super fast key-value store with **Better-SQLite3** and v8 as a fast JSON replacement.
+
