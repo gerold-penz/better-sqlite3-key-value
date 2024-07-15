@@ -1,0 +1,59 @@
+{
+  "name": "better-sqlite3-key-value",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gerold Penz",
+    "email": "gerold@gp-softwaretechnik.at",
+    "url": "https://gp-softwaretechnik.at/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerold-penz/better-sqlite3-key-value.git"
+  },
+  "module": "src/index.ts",
+  "main": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/gerold-penz/better-sqlite3-key-value/issues"
+  },
+  "description": "A super fast key-value store with Better-SQLite3 and v8 as a fast JSON replacement.",
+  "homepage": "https://github.com/gerold-penz/better-sqlite3-key-value",
+  "keywords": [
+    "Better-SQLite3",
+    "NodeJs",
+    "Bun",
+    "SQLite",
+    "Key-Value",
+    "KV",
+    "Store",
+    "Database",
+    "TypeScript",
+    "Cache",
+    "NoSql",
+    "Data-Storage",
+    "NoSql-Database",
+    "Db",
+    "Storage",
+    "Key-Value-Store",
+    "Key-Value-Storage",
+    "TTL",
+    "Time To Live"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "bun test",
+    "increment_package_version": "npm version patch --no-git-tag-version",
+    "prepublishOnly": "bun run test",
+    "npm:publish": "bun run increment_package_version && npm publish --access public --dry-run",
+    "jsr:publish": "bunx jsr publish --dry-run"
+  },
+  "files": [
+    "src"
+  ]
+}
